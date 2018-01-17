@@ -66,7 +66,9 @@ app.post("/sign_up", function(req,res, next){
      .insert({
        username,
        hashed_password
-     });
+     }).then(function(){
+       res.redirect("/sign_in");
+     })
   }).catch(function(err){
     next(err);
   });
