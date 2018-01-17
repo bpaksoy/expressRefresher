@@ -75,6 +75,6 @@ app.post("/sign_up", function(req,res, next){
 });
 
 
-app.listen(8000, function(){
-  console.log("Listening on 8000...")
+app.listen(port, function(){
+  console.log("Listening on", port, "...")
 })
